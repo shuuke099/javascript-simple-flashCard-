@@ -74,31 +74,31 @@ questionsList.addEventListener("click", function(event){
     console.log(id);
     
     // delete the item
-    // questionsList.removeChild(event.target.parentElement.parentElement.parentElement)
+ questionsList.removeChild(event.target.parentElement.parentElement.parentElement)
 
-  //   // edited question
-  //   const temtQuestion = data.filter(function(item){
-  //     return item.id === parseInt(id)
-  //   })
-  //   // rested question
-  //   const temtData = data.filter(function(item){
-  //     return item.id !== parseInt(id)
-  //   })
-  //   data =temtData;
+   // edited question
+    const temtQuestion = data.filter(function(item){
+      return item.id === parseInt(id)
+    })
+    // rested question
+    const temtData = data.filter(function(item){
+      return item.id !== parseInt(id)
+    })
+    data =temtData;
     
     
-  //  questionInput.value = temtQuestion[0].title
-  //  answerInput.value = temtQuestion[0].answer
+   questionInput.value = temtQuestion[0].title
+   answerInput.value = temtQuestion[0].answer
     
-  // }else if(event.target.classList.contains("delete-flashcard")){
-  //   let id = event.target.dataset.id;
-  //   // delete the item
-  //   questionsList.removeChild(event.target.parentElement.parentElement.parentElement)
+  }else if(event.target.classList.contains("delete-flashcard")){
+    let id = event.target.dataset.id;
+    // delete the item
+    questionsList.removeChild(event.target.parentElement.parentElement.parentElement)
   
-  //   const temtData = data.filter(function(item){
-  //     return item.id !== parseInt(id)
-  //   })
-  //   data =temtData;
+    const temtData = data.filter(function(item){
+      return item.id !== parseInt(id)
+    })
+    data =temtData;
     
     
   
